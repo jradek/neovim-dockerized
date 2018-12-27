@@ -45,7 +45,7 @@ set incsearch
 set hlsearch
 set ruler
 set cursorline
-highlight CursorLine ctermfg=8
+highlight CursorLine ctermbg=8
 highlight Normal ctermbg=NONE
 
 set wildmenu

@@ -14,13 +14,14 @@ RUN apk update && \
     grep \
     neovim \
     python3-dev \
-    py3-pip \
+    py3-pip && \
+    pip3 install --upgrade pip neovim flake8 && \
+# Remove all the build tools again to reduce image size
+    apk del \
+    build-base \
+    gcc \
+    python3-dev && \
     rm -rf /var/cache/apk/*
-
-
-RUN pip3 install --upgrade pip neovim flake8
-
-# TODO: build-base, gcc, python-dev could be uninstalled right now again to reduce image size
 
 RUN curl -fLo /root/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
