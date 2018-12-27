@@ -45,8 +45,8 @@ set incsearch
 set hlsearch
 set ruler
 set cursorline
-" highlight CursorLine ctermfg=black
-" highligh Normal ctermbg=NONE
+highlight CursorLine ctermfg=8
+highlight Normal ctermbg=NONE
 
 set wildmenu
 set wildmode=list:longest,list:full

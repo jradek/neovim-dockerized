@@ -35,6 +35,10 @@ nnoremap <silent> ,g :Denite grep<CR>
 nnoremap <silent> ,h :Denite help<CR>
 nnoremap <silent> ,l :Denite line<CR>
 " nnoremap <silent> ,t :Denite tag<CR>
+call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')¬
+call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')¬
+call denite#custom#option('default', 'prompt', '>')¬
+call denite#custom#option('default', 'direction', 'top')
 
 " ale
 let g:ale_sign_column_always = 1
