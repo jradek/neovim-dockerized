@@ -9,6 +9,8 @@ Plug 'altercation/vim-colors-solarized'
 " Plug 'sjl/badwolf'
 " Plug 'chriskempson/base16-vim'
 
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'tpope/vim-markdown', {'for': 'markdown'}   " markdown syntax highlight
 Plug 'scrooloose/nerdtree'
 Plug 'Yggdroot/indentLine'  " indention lines
 Plug 'vim-airline/vim-airline'
