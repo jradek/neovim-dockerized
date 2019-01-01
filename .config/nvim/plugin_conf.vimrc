@@ -27,23 +27,18 @@ let g:NERDTreeMapActivateNode = "<CR>"
 let file_name = expand("%:p")
 nnoremap <C-e> :NERDTreeToggle<CR>
 
-" denite.vim
-nnoremap <silent> ,b :Denite buffer<CR>
-" nnoremap <silent> ,c :Denite changes<CR>
-nnoremap <silent> ,f :Denite file<CR>
-nnoremap <silent> ,g :Denite grep<CR>
-nnoremap <silent> ,h :Denite help<CR>
-nnoremap <silent> ,l :Denite line<CR>
-" nnoremap <silent> ,t :Denite tag<CR>
-call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
-call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
-call denite#custom#option('default', 'prompt', '>')
-call denite#custom#option('default', 'direction', 'top')
+" fzf
+nnoremap <silent> ,b :Buffers<CR>
+nnoremap <silent> ,f :Files<CR>
+nnoremap <silent> ,l :Lines<CR>
+
 
 " ale
+" IMPORTANT: turn off completely with g:ale_enabled, and you can run ALE manually with :ALELint.
 let g:ale_sign_column_always = 1
 let g:ale_open_list = 1
 let g:ale_set_loclist = 0
+" NOTE: close quickfix with ':ccl[ose]' and reopne with ':cope[n]'
 let g:ale_set_quickfix = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'

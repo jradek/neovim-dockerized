@@ -50,6 +50,5 @@ highlight Normal ctermbg=NONE
 
 set wildmenu
 set wildmode=list:longest,list:full
-" set wildignore+=*.o,*.obj,*.so,*.a
 
 set backspace=indent,eol,start

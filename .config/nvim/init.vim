@@ -3,11 +3,15 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
 
+" MORE COLOR SCHEMES
 " Plug 'dracula/vim'
 " Plug 'vim-scripts/Zenburn'
 " Plug 'morhetz/gruvbox'
 " Plug 'sjl/badwolf'
 " Plug 'chriskempson/base16-vim'
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tpope/vim-markdown', {'for': 'markdown'}   " markdown syntax highlight
@@ -18,7 +22,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'easymotion/vim-easymotion'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'zchee/deoplete-jedi'
-Plug 'Shougo/denite.nvim', {'do': ':UpdateRemotePlugins'}
 
 Plug 'tpope/vim-commentary'  "commenting with gcc command
 Plug 'w0rp/ale'

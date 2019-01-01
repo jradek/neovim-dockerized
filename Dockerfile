@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM bash:latest
 
 LABEL maintainer="jradek@yandex.com"
 
@@ -27,9 +27,10 @@ RUN curl -fLo /root/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 COPY .config /root/.config
+COPY .bashrc /root/
 
 RUN nvim +PlugInstall +qa
 
 WORKDIR /usr/src/nvim
 
-ENTRYPOINT ["nvim"]
+ENTRYPOINT ["/usr/local/bin/bash", "-i", "-c", "nvim"]
