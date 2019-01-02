@@ -1,0 +1,22 @@
+diff --git a/.config/nvim/general.vimrc b/.config/nvim/general.vimrc
+index b259162..87ffe0b 100644
+--- a/.config/nvim/general.vimrc
++++ b/.config/nvim/general.vimrc
+@@ -35,7 +35,7 @@ colorscheme solarized
+ " other stuff
+ set number
+ set relativenumber
+-" set lazyredraw " this solves slow scrolling because of relative numbering
++set lazyredraw " this solves slow scrolling because of relative numbering
+ 
+ set smartcase
+ set smartindent
+@@ -45,7 +45,7 @@ set incsearch
+ set hlsearch
+ set ruler
+ set cursorline
+-highlight CursorLine ctermbg=8
++highlight CursorLine ctermbg=black  " adapt MAC color scheme
+ highlight Normal ctermbg=NONE
+ 
+ set wildmenu
