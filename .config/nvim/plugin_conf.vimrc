@@ -1,3 +1,5 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" airline
 let g:airline#extentions#tabline#enabled = 1
 let g:airline#extentions#tabline#show_buffers = 0
 let g:airline#extentions#tabline#tab_nr_type = 1
@@ -16,23 +18,33 @@ let g:airline_symbols.linenr = ''
 " let g:airline_symbols.linenr = 'Ξ'
 let g:airline_powerline_fonts = 1
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
 " Use deoplete.
 set completeopt-=preview
 let g:deoplete#enable_at_startup = 1
 let g:python3_host_prog = '/usr/bin/python3'
 
+" use ctrl-j / ctrl-k for navigation
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMapActivateNode = "<CR>"
 let file_name = expand("%:p")
 nnoremap <C-e> :NERDTreeToggle<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf
 nnoremap <silent> ,b :Buffers<CR>
 nnoremap <silent> ,f :Files<CR>
 nnoremap <silent> ,l :Lines<CR>
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""
 " ale
 " IMPORTANT: turn off completely with g:ale_enabled, and you can run ALE manually with :ALELint.
 let g:ale_sign_column_always = 1
@@ -52,6 +64,7 @@ let g:ale_list_window_size = 5 " Show 5 lines of errors (default: 10)
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
 " vim markdown
 let g:markdown_fenced_languages = ['vim', 'python']
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown

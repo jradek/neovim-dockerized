@@ -15,5 +15,3 @@ nnoremap <leader>w :w<CR>
 " move to next buffer
 " nmap <leader>h :bprevious<CR>
 
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
